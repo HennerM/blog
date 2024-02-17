@@ -1,7 +1,7 @@
 {
-	"name": "Astro Theme Cactus Demo",
-	"short_name": "Astro_Cactus",
-	"description": "Starter blog site for Astro",
+	"name": "h11r.at",
+	"short_name": "h11r.at",
+	"description": "Software Engineering and Machine Learning Blog",
 	"icons": [
 		{
 			"src": "/192x192.png",
