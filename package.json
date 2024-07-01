@@ -26,7 +26,7 @@
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.7.0",
-		"@iconify-json/mdi": "^1.1.64",
+		"@iconify-json/mdi": "^1.1.67",
 		"@iconify-json/ri": "^1.1.20",
 		"@pagefind/default-ui": "^1.0.4",
 		"@resvg/resvg-js": "^2.6.2",

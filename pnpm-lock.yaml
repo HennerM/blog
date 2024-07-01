@@ -44,8 +44,8 @@ devDependencies:
     specifier: ^0.7.0
     version: 0.7.0(prettier-plugin-astro@0.13.0)(prettier@3.2.5)(typescript@5.4.5)
   '@iconify-json/mdi':
-    specifier: ^1.1.64
-    version: 1.1.64
+    specifier: ^1.1.67
+    version: 1.1.67
   '@iconify-json/ri':
     specifier: ^1.1.20
     version: 1.1.20
@@ -1132,8 +1132,8 @@ packages:
     resolution: {integrity: sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw==}
     dev: true
 
-  /@iconify-json/mdi@1.1.64:
-    resolution: {integrity: sha512-zGeo5TjhNFAY6FmSDBLAzDO811t77r6v/mDi7CAL9w5eXqKez6bIjk8R9AL/RHIeq44ALP4Ozr4lMqFTkHr7ug==}
+  /@iconify-json/mdi@1.1.67:
+    resolution: {integrity: sha512-00nllHES8hyACwIfgySlQgAE6MKgpr2wsKfpifMiZWZ9aXC5l4Jb0lR3lJSWwXgOW6kzAOdzC3T+2VOfBBZ13A==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
