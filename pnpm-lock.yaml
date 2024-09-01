@@ -47,8 +47,8 @@ devDependencies:
     specifier: ^1.1.64
     version: 1.1.64
   '@iconify-json/ri':
-    specifier: ^1.1.20
-    version: 1.1.20
+    specifier: ^1.2.0
+    version: 1.2.0
   '@pagefind/default-ui':
     specifier: ^1.0.4
     version: 1.0.4
@@ -1138,8 +1138,8 @@ packages:
       '@iconify/types': 2.0.0
     dev: true
 
-  /@iconify-json/ri@1.1.20:
-    resolution: {integrity: sha512-yScIGjLFBCJKWKskQTWRjNI2Awoq+VRDkRxEsCQvSfdz41n+xkRtFG2K6J1OVI90ClRHfjFC8VJ2+WzxxyFjTQ==}
+  /@iconify-json/ri@1.2.0:
+    resolution: {integrity: sha512-br8It3uRHylNhEH72aU9VF6gIdL4BAi6JMdcxsCaVbAyWBJ0jd4RxfmsYnil6TmEfP5wxihiCKbtbQmIHZdqKg==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
