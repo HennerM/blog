@@ -22,9 +22,12 @@ export type PaginationLink = {
 
 export type SiteMeta = {
 	title: string;
-	description?: string;
+	description?: string | undefined;
 	ogImage?: string | undefined;
 	articleDate?: string | undefined;
+	modifiedDate?: string | undefined;
+	noindex?: boolean | undefined;
+	structuredData?: Record<string, unknown> | Array<Record<string, unknown>> | undefined;
 };
 
 /** Webmentions */

@@ -4,6 +4,7 @@ import type { CollectionEntry } from "astro:content";
 import BlogHero from "@/components/blog/Hero.astro";
 import TOC from "@/components/blog/TOC.astro";
 import WebMentions from "@/components/blog/webmentions/index.astro";
+import { siteConfig } from "@/site-config";
 
 import BaseLayout from "./Base.astro";
 
@@ -17,11 +18,33 @@ const {
 	slug,
 } = post;
 const socialImage = ogImage ?? `/og-image/${slug}.png`;
-const articleDate = updatedDate?.toISOString() ?? publishDate.toISOString();
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).href;
+const articleDate = publishDate.toISOString();
+const modifiedDate = updatedDate?.toISOString();
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "BlogPosting",
+	headline: title,
+	description,
+	image: new URL(socialImage, Astro.site).href,
+	datePublished: articleDate,
+	...(modifiedDate && { dateModified: modifiedDate }),
+	author: {
+		"@type": "Person",
+		name: siteConfig.author,
+	},
+	publisher: {
+		"@type": "Organization",
+		name: siteConfig.title,
+		url: Astro.site?.href,
+	},
+	mainEntityOfPage: canonicalURL,
+	keywords: post.data.tags.join(", "),
+};
 const { headings } = await post.render();
 ---
 
-<BaseLayout meta={{ articleDate, description, ogImage: socialImage, title }}>
+<BaseLayout meta={{ articleDate, description, modifiedDate, ogImage: socialImage, structuredData, title }}>
 	<div class="gap-x-10 lg:flex lg:items-start">
 		{!!headings.length && <TOC headings={headings} />}
 		<article class="flex-grow break-words" data-pagefind-body>
