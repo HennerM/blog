@@ -1,5 +1,7 @@
 ---
-import { menuLinks } from "@/site-config";
+import { Image } from "astro:assets";
+
+import { menuLinks, siteConfig } from "@/site-config";
 
 const url = new URL(Astro.request.url);
 ---
@@ -11,9 +13,12 @@ const url = new URL(Astro.request.url);
 			class="group inline-flex items-center sm:relative sm:inline-block"
 			href="/"
 		>
-			<img
+			<Image
+				alt={`${siteConfig.title} home`}
 				class="h-16 w-16 grayscale transition-[filter] duration-200 group-hover:[filter:invert(50%)_sepia(25%)_saturate(992%)_hue-rotate(116deg)_brightness(92%)_contrast(89%)] dark:grayscale-0 dark:group-hover:[filter:brightness(1.1)_hue-rotate(15deg)] sm:absolute sm:start-[-5rem] sm:me-0 sm:h-20 sm:w-20"
+				height={1024}
 				src="/icon.svg"
+				width={1024}
 			/>
 		</a>
 		<nav
@@ -28,7 +33,9 @@ const url = new URL(Astro.request.url);
 						class="px-4 py-4 sm:py-0 sm:hover:underline"
 						data-astro-prefetch
 						href={link.path}
-					>{link.title}</a>
+					>
+						{link.title}
+					</a>
 				))
 			}
 		</nav>
