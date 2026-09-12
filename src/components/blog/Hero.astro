@@ -43,7 +43,7 @@ const dateTimeOptions: Intl.DateTimeFormatOptions = {
 		{remarkPluginFrontmatter.minutesRead}
 	</p>
 	{
-		data.updatedDate && (
+		data.updatedDate && data.updatedDate.valueOf() !== data.publishDate.valueOf() && (
 			<span class="rounded-lg bg-quote/10 p-1 text-quote">
 				Last Updated:
 				<FormattedDate class="ms-1" date={data.updatedDate} dateTimeOptions={dateTimeOptions} />
