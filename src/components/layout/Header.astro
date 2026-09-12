@@ -17,6 +17,7 @@ const url = new URL(Astro.request.url);
 				alt={`${siteConfig.title} home`}
 				class="h-16 w-16 grayscale transition-[filter] duration-200 group-hover:[filter:invert(50%)_sepia(25%)_saturate(992%)_hue-rotate(116deg)_brightness(92%)_contrast(89%)] dark:grayscale-0 dark:group-hover:[filter:brightness(1.1)_hue-rotate(15deg)] sm:absolute sm:start-[-5rem] sm:me-0 sm:h-20 sm:w-20"
 				height={1024}
+				loading="eager"
 				src="/icon.svg"
 				width={1024}
 			/>
