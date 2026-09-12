@@ -28,9 +28,7 @@ const url = new URL(Astro.request.url);
 						class="px-4 py-4 sm:py-0 sm:hover:underline"
 						data-astro-prefetch
 						href={link.path}
-					>
-						{link.title}
-					</a>
+					>{link.title}</a>
 				))
 			}
 		</nav>
